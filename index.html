@@ -27,5 +27,23 @@
 <script>
 document.getElementById('interestForm').addEventListener('submit',function(e){e.preventDefault();const status=document.getElementById('status');if(document.getElementById('age').value!=='yes'){status.style.display='block';status.style.background='#fff0f0';status.style.color='#a40022';status.textContent='This service is for adults aged 18 and over only.';return;}status.style.display='block';status.style.background='#fff7e6';status.style.color='#7a4c00';status.textContent='Demo only: your details have not been sent or saved. A secure backend is needed before collecting real registrations.';});
 </script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+  const firebaseConfig = {
+
+  apiKey: "AIzaSyA3dIuL9HW8Qz_zXI3WLdT2AA0eM8pmPJc",
+  authDomain: "rentmydate-cbda6.firebaseapp.com",
+  projectId: "rentmydate-cbda6",
+  storageBucket: "rentmydate-cbda6.firebasestorage.app",
+  messagingSenderId: "668079132940",
+  appId: "1:668079132940:web:b10e0b54aa005a97cb7929"
+
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  </script>
 </body>
 </html>
